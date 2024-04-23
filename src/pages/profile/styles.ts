@@ -5,8 +5,8 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
-    padding-top: 15vh;
+    gap: 1.5rem;
+    padding-top: 10vh;
     background-color: #0d1016;
     color: #fff;
 `;
@@ -19,11 +19,36 @@ export const Avatar = styled.img`
 
 export const UsernameContainer = styled.div`
     display: flex;
-    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    `;
+
+export const Name = styled.span`
+    font-size: 2em;
+    font-weight: 500;
+`;
+
+export const UserName = styled.span`
+    font-size: 2em;
+    font-weight: 350;
+    color: #242831;
 `;
 
 export const FollowerContainer = styled.div`
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
 `;
 
+export const Icon = styled.img`
+    width: 1.5rem;
+`;
+
+export const BlogContainer = styled.div`
+    display: flex;
+    gap: 0.5rem;
+`;
+
+export const RepoContainer = styled.div`
+    display: flex;
+    gap: 0.5rem;
+`;

@@ -1,6 +1,9 @@
 import { useContext } from "react";
 import { UserContext } from "../../contexts/userContext";
-import { Container, Avatar, UsernameContainer, FollowerContainer } from './styles'
+import { Container, Avatar, UsernameContainer, FollowerContainer, Name, UserName, Icon, BlogContainer, RepoContainer } from './styles';
+import Follower from '../../assets/user.png';
+import Bio from '../../assets/bio.png';
+import Repo from '../../assets/repo.png';
 
 function Profile() {
 
@@ -19,16 +22,23 @@ function Profile() {
         <Container>
             <Avatar src={avatar}/>
             <UsernameContainer>
-                <span>{name}</span>
-                <span>{username}</span>
+                <Name>{name}</Name>
+                <UserName>{username}</UserName>
             </UsernameContainer>
             <span>{bio? bio : 'Não possui bio'}</span>
             <FollowerContainer>
-                <span>{followers}</span>
-                <span>{following}</span>
+                <Icon src={Follower} alt=""/>
+                <span>{followers} followers • </span>
+                <span>{following} following</span>
             </FollowerContainer>
-            <span>{blog}</span>
-            <span>{repos}</span>
+            <BlogContainer>
+                <Icon src={Bio} alt=""/>
+                <span>{blog}</span>   
+            </BlogContainer>
+            <RepoContainer>
+                <Icon src={Repo} alt=""/>
+                <span>Repositories: {repos}</span>
+            </RepoContainer>
         </Container>
     );
 }
