@@ -31,7 +31,7 @@ export const Name = styled.span`
 export const UserName = styled.span`
     font-size: 2em;
     font-weight: 350;
-    color: #242831;
+    color: #666e77;
 `;
 
 export const FollowerContainer = styled.div`
@@ -51,4 +51,16 @@ export const BlogContainer = styled.div`
 export const RepoContainer = styled.div`
     display: flex;
     gap: 0.5rem;
+`;
+
+export const Text = styled.span`
+    font-size: 1.2em;
+    color: #666e77;
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:hover{
+        transform: scale(1.05);
+        color: #fff;
+    }
 `;
