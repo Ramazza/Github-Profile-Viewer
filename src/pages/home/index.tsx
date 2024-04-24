@@ -5,13 +5,16 @@ import { useNavigate } from 'react-router-dom';
 
 function Home() {
 
-    const { setUserName, getUser } = useContext(UserContext);
+    const { setUserName, getUser, getFollowers, getFollowing, getRepo } = useContext(UserContext);
 
     const navigate = useNavigate();
 
     const handleSearch = () => {
         getUser();
-        navigate('/profile')
+        getFollowers();
+        getFollowing();
+        getRepo();
+        navigate('/profile');
     }
 
     const handleKeyPress = (event: React.KeyboardEvent) => {
